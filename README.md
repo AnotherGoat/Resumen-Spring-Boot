@@ -2,12 +2,15 @@
 
 En este documento se muestra lo básico para empezar a usar Spring Boot en Java.
 
+## Fuentes de información
+
+* https://www.baeldung.com/spring-request-param
+
 ## Instalación de XAMPP
 
 https://www.apachefriends.org/download.html
 
 Para revisar que funciona, ir a localhost:80 en su navegador.
-
 
 ## Creación de una plantilla de Spring
 
@@ -186,7 +189,6 @@ public class NombreController {
     }
 
 }
-
 ```
 
 Ejemplo de uso:
@@ -196,7 +198,7 @@ http://localhost:8080/api/id
 ## Ejemplo con valores por defecto
 
 ```
-package vic.mardones.demo.controller;
+package com.example.demo;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -215,3 +217,59 @@ public class TestController {
 Ejemplo de uso:
 http://localhost:8080/api/test?nombre=Francisca
 http://localhost:8080/api/test
+
+## Ejemplo usando mapas
+
+```
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+
+@RestController
+@RequestMapping(value = "/api")
+public class MapController {
+
+    @GetMapping(value = "/map")
+    public String desplegarParametros(@RequestParam Map<String, String> parametros) {
+        // Después se puede trabajar con ellos usando sus claves
+        return "Parámetros ingresados: " + parametros.entrySet();
+    }
+
+}
+```
+
+Ejemplo de uso:
+http://localhost:8080/api/map/?pi=3.14&e=2.71&phi=1.61
+
+## Ejemplo de parámetros con valores múltiples
+
+```
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(value = "/api")
+public class SumaController {
+
+    @GetMapping(value = "/suma")
+    public String desplegarSuma(@RequestParam List<Integer> numeros) {
+        int suma = 0;
+
+        for (int n : numeros) {
+            suma += n;
+        }
+
+        return "Números ingresados: " + numeros.toString() + "<br>Suma: " + suma;
+    }
+
+}
+```
+
+Ejemplo de uso:
+http://localhost:8080/api/suma?numeros=10,20,30,45
+http://localhost:8080/api/suma?numeros=10&numeros=20&numeros=30&numeros=45
