@@ -8,13 +8,13 @@ En este documento se muestra lo básico para empezar a usar Spring Boot en Java.
 
 ## Instalación de XAMPP
 
-https://www.apachefriends.org/download.html
+* https://www.apachefriends.org/download.html
 
 Para revisar que funciona, ir a localhost:80 en su navegador.
 
 ## Creación de una plantilla de Spring
 
-https://start.spring.io
+* https://start.spring.io
 
 Siempre inicia con estas dependencias en el pom.xml:
 
@@ -35,13 +35,9 @@ Siempre inicia con estas dependencias en el pom.xml:
 ## Dependencias más usadas
 
 * Spring Boot DevTools: Casi siempre se usa, mejora el rendimiento.
-
 * Spring Web: También se debe usar.
-
 * MySQL Driver: Para trabajar con MySQL.
-
 * Spring Data Reactive MongoDB: Para trabajar con MongoDB.
-
 * 
 
 ## Gitignore por defecto
@@ -123,7 +119,7 @@ public class HolaMundoController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/holamundo
+* http://localhost:8080/api/holamundo
 
 ## Ejemplo con un parámetro
 
@@ -145,8 +141,8 @@ public class CuadradoController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/cuadrado
-http://localhost:8080/api/cuadrado?x=15
+* http://localhost:8080/api/cuadrado
+* http://localhost:8080/api/cuadrado?x=15
 
 ## Ejemplo con múltiples parámetros
 
@@ -169,8 +165,8 @@ public class IdController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/id?nombre=Juan&id=1234
-http://localhost:8080/api/id?id=1234&nombre=Juan
+* http://localhost:8080/api/id?nombre=Juan&id=1234
+* http://localhost:8080/api/id?id=1234&nombre=Juan
 
 ## Ejemplo con parámetros opcionales
 
@@ -192,8 +188,8 @@ public class NombreController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/id?nombre=Felipe
-http://localhost:8080/api/id
+* http://localhost:8080/api/id?nombre=Felipe
+* http://localhost:8080/api/id
 
 ## Ejemplo con valores por defecto
 
@@ -215,8 +211,8 @@ public class TestController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/test?nombre=Francisca
-http://localhost:8080/api/test
+* http://localhost:8080/api/test?nombre=Francisca
+* http://localhost:8080/api/test
 
 ## Ejemplo usando mapas
 
@@ -241,7 +237,7 @@ public class MapController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/map/?pi=3.14&e=2.71&phi=1.61
+* http://localhost:8080/api/map/?pi=3.14&e=2.71&phi=1.61
 
 ## Ejemplo de parámetros con valores múltiples
 
@@ -271,5 +267,5 @@ public class SumaController {
 ```
 
 Ejemplo de uso:
-http://localhost:8080/api/suma?numeros=10,20,30,45
-http://localhost:8080/api/suma?numeros=10&numeros=20&numeros=30&numeros=45
+* http://localhost:8080/api/suma?numeros=10,20,30,45
+* http://localhost:8080/api/suma?numeros=10&numeros=20&numeros=30&numeros=45
